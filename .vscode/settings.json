@@ -6,6 +6,7 @@
         "sstream": "c",
         "string_view": "c",
         "array": "c",
-        "string": "c"
+        "string": "c",
+        "freertos.h": "c"
     }
 }
