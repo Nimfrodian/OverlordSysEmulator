@@ -1,4 +1,12 @@
 #include "UART2.h"
+#include "string.h"
+
+
+static void uartWrite(const char* input)
+{
+    int len = strlen(input);
+    uart_write_bytes(UART_NUM_0, input, len);
+}
 
 void uart2_init(void)
 {
@@ -31,7 +39,7 @@ static int modbus2Receiver(int UartNum, mb2MasterMsg* MasterMsg)
     int length = 0;
     uart_get_buffered_data_len(UartNum, (size_t*)&length);
 
-    if (length > 0)
+    while (length--)
     {
         uart_read_bytes(UartNum, &MasterMsg->mbData.dataArr[dataArrIndx[UartNum]], 1, 20 / portTICK_RATE_MS);  // read one byte
         //char printable[100] = {0};
