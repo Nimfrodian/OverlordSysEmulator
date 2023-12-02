@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "*.tcc": "c",
+        "istream": "c",
+        "ostream": "c",
+        "sstream": "c",
+        "string_view": "c",
+        "array": "c",
+        "string": "c"
+    }
+}
