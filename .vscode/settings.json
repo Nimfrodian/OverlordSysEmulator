@@ -10,6 +10,9 @@
         "freertos.h": "c",
         "uart2.h": "c",
         "esp_log.h": "c",
-        "uart1.h": "c"
+        "uart1.h": "c",
+        "string.h": "c",
+        "uart.h": "c",
+        "modbus.h": "c"
     }
 }
