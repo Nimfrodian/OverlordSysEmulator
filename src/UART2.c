@@ -254,7 +254,8 @@ static void modbus2ParserAndComposer(mb2MasterMsg* MasterMsg, mb2SlaveMsg* Slave
             break;
         }
     }
-    tempVar += MasterMsg->mbData.dataNames.slaveAddress;
+    //tempVar += MasterMsg->mbData.dataNames.slaveAddress;
+    tempVar += MasterMsg->mbData.dataArr[0];
     sendable = *((const uint32_t*) &tempVar);
 
     // compose the message based on master message
